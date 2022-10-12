@@ -6,5 +6,28 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Inter",
+              variants: ["300", "400", "500", "600"],
+            },
+          ],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-styled-components`,
+  ],
 }
