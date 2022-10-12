@@ -7,6 +7,6 @@ interface CardProps {
 }
 
 export default function Card({ navigation, title }: CardProps) {
-  //para dar certo navigation precisa ser anchor ,nao pode usar o navigate do gatbsy
+  //para dar certo precisa ser link
   return <Container to={navigation}>{title}</Container>
 }

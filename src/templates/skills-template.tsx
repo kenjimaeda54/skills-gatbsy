@@ -6,9 +6,6 @@ import { Container, WrapBack } from "./styles"
 const shortcodes = { Link }
 
 export default function Template({ data, children }) {
-  const { mdx } = data
-  const { frontmatter } = mdx
-
   return (
     <Container>
       <WrapBack>
@@ -17,6 +14,11 @@ export default function Template({ data, children }) {
       <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </Container>
   )
+}
+
+export const Head = ({ data: { mdx } }) => {
+  const { frontmatter } = mdx
+  return <title>{frontmatter.title}</title>
 }
 
 export const pageQuery = graphql`
