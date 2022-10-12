@@ -1,5 +1,7 @@
 const path = require(`path`)
 
+//https://www.gatsbyjs.com/docs/how-to/routing/mdx/#programmatically-creating-pages
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
@@ -7,13 +9,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
-              title
-            }
+      allMdx {
+        nodes {
+          id
+          frontmatter {
+            path
+            title
+          }
+          internal {
+            contentFilePath
           }
         }
       }
@@ -25,11 +29,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMdx.nodes.forEach(node => {
     createPage({
       path: node.frontmatter.path,
-      component: skillsTemplate,
-      context: {},
+      component: `${skillsTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
+      context: { id: node.id },
     })
   })
 }

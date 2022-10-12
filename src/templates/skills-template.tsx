@@ -1,21 +1,27 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import { Container, WrapBack } from "./styles"
 
-export default function Template({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+const shortcodes = { Link }
+
+export default function Template({ data, children }) {
+  const { mdx } = data
+  const { frontmatter } = mdx
 
   return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </>
+    <Container>
+      <WrapBack>
+        <Link to="/">Voltar</Link>
+      </WrapBack>
+      <MDXProvider components={shortcodes}>{children}</MDXProvider>
+    </Container>
   )
 }
 
 export const pageQuery = graphql`
-  query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+  query ($id: String!) {
+    mdx(id: { eq: $id }) {
       frontmatter {
         path
         title
