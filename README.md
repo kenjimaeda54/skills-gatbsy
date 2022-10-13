@@ -110,7 +110,7 @@ export default function Card({ navigation, title }: CardProps) {
   return <Container to={navigation}>{title}</Container>
 }
 
-//MarkdownX
+//MDX
 --- 
 
 path: "/skill/frontend"
