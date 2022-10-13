@@ -57,6 +57,47 @@ export const Container = styled.div`
     font-size: 0.9em;
     font-weight: 400;
   }
+
+  @media screen and (max-width: 1113px) {
+    padding: 10vh 2em;
+  }
+
+  @media screen and (max-width: 740px) {
+    .language-txt {
+      white-space: pre-wrap;
+      width: min-content;
+      hyphens: auto;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    p {
+      font-size: 0.7em;
+    }
+
+    H1,
+    H2,
+    H3 {
+      font-size: 1em;
+    }
+
+    .code-navigation pre {
+      padding: 5px 7px;
+    }
+
+    .language-txt {
+      color: ${({ theme }) => theme.colors.gray600};
+      font-size: 0.6em;
+      font-weight: 500;
+    }
+
+    a {
+      font-size: 0.7em;
+    }
+    li {
+      font-size: 0.7em;
+    }
+  }
 `
 
 export const WrapBack = styled.div`
@@ -71,6 +112,7 @@ export const WrapBack = styled.div`
   a {
     text-align: center;
     background-color: ${({ theme }) => theme.colors.gray100};
+    color: ${({ theme }) => theme.colors.white};
     padding: 20px 0px;
     width: 90px;
     border-radius: 7px;
@@ -84,4 +126,11 @@ export const WrapBack = styled.div`
   a:hover {
   opacity: 0.7
   }
+
+  @media screen and (max-width: 650px) {
+     font-size: 0.9em;
+  }
+
+
+
 `

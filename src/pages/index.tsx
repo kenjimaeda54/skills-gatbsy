@@ -5,7 +5,6 @@ import { Container } from "./styles"
 
 export default function Home({ data: { allMdx } }) {
   const { nodes } = allMdx
-  console.log(nodes, "nodes")
 
   return (
     <Container>
