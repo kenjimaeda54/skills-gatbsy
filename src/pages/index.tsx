@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Card from "../components/Card"
-import { Container } from "./styles"
+import { Container } from "../styles-home/styles"
 
 export default function Home({ data: { allMdx } }) {
   const { nodes } = allMdx
