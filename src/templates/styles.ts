@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   p {
     font-size: 1em;
-    color: ${({ theme }) => theme.colors.white};
+    color: #f2f2f2;
     font-weight: 400;
     line-height: 1.3em;
   }
@@ -22,7 +22,7 @@ export const Container = styled.div`
   H1,
   H2,
   H3 {
-    color: ${({ theme }) => theme.colors.white};
+    color: #f2f2f2;
     font-size: 1.7em;
     font-size: 700;
   }
@@ -35,14 +35,14 @@ export const Container = styled.div`
   }
 
   .language-txt {
-    color: ${({ theme }) => theme.colors.gray600};
+    color: #1a1a1a;
     font-size: 0.9em;
     line-height: 2.5em;
     font-weight: 500;
   }
 
   a {
-    color: ${({ theme }) => theme.colors.white};
+    color: #f2f2f2;
     font-size: 1em;
     font-weight: 300;
     line-height: 1.4em;
@@ -53,7 +53,7 @@ export const Container = styled.div`
     gap: 3px;
   }
   li {
-    color: ${({ theme }) => theme.colors.white};
+    color: #f2f2f2;
     font-size: 0.9em;
     font-weight: 400;
   }
