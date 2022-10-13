@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   p {
     font-size: 1em;
-    color: #f2f2f2;
+    color: ${({ theme }) => theme.colors.white};
     font-weight: 400;
     line-height: 1.3em;
   }
@@ -22,27 +22,27 @@ export const Container = styled.div`
   H1,
   H2,
   H3 {
-    color: #f2f2f2;
+    color: ${({ theme }) => theme.colors.white};
     font-size: 1.7em;
     font-size: 700;
   }
 
   .code-navigation pre {
-    background-color: #f9eac3;
+    background-color: ${({ theme }) => theme.colors.pastel};
     border-radius: 2px;
     padding: 5px 25px;
     margin: 0.5em 0;
   }
 
   .language-txt {
-    color: #1a1a1a;
+    color: ${({ theme }) => theme.colors.gray600};
     font-size: 0.9em;
     line-height: 2.5em;
     font-weight: 500;
   }
 
   a {
-    color: #f2f2f2;
+    color: ${({ theme }) => theme.colors.white};
     font-size: 1em;
     font-weight: 300;
     line-height: 1.4em;
@@ -53,7 +53,7 @@ export const Container = styled.div`
     gap: 3px;
   }
   li {
-    color: #f2f2f2;
+    color: ${({ theme }) => theme.colors.white};
     font-size: 0.9em;
     font-weight: 400;
   }
