@@ -30,5 +30,6 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
+    `babel-plugin-styled-components`,
   ],
 }
