@@ -1,8 +1,8 @@
 ## Skills
-[Site](https://kvm-skills.onrender.com/) com meus skills 
+[Site](https://kvm-skills.onrender.com/) com minhas habilidades 
 
-## Motivacao
-Poussuir uma pagina com descricao das minhas habilidades
+## Motivação
+Possuir uma página com descrição das minhas habilidades
 
 
 ## Feture
