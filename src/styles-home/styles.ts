@@ -14,6 +14,12 @@ export const Container = styled.div`
   }
 `
 
+export const WrapLink = styled.div`
+  position: absolute;
+  top: 2vh;
+  right: 10vw;
+`
+
 export const ContainerNotFound = styled.div`
   display: flex;
   flex-direction: column;
